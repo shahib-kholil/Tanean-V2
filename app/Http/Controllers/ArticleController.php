@@ -99,6 +99,8 @@ class ArticleController extends Controller
             ->take(3)
             ->get();
 
+        $article->content = (new \HTMLPurifier(\HTMLPurifier_Config::createDefault()))->purify($article->content ?? '');
+
         return view('articles.show', compact('article', 'relatedArticles'));
     }
 

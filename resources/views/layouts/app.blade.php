@@ -120,7 +120,7 @@
                             class="hidden md:inline-flex items-center px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wide text-white bg-tanean-beige hover:bg-tanean-dark hover:border-tanean-dark border border-transparent transition">
                             Kirimkan Ceritamu
                         </a>
-                        <a href="{{ route('login') }}"
+                        <a href="{{ route('filament.admin.auth.login') }}"
                             class="hidden md:inline-flex items-center px-5 py-2 rounded-[15px] text-xs font-bold uppercase tracking-wide text-white bg-tanean-beige hover:bg-tanean-dark hover:border-tanean-dark border border-transparent transition"
                             target="_blank">
                             Masuk
@@ -203,10 +203,10 @@
                 <div>
                     <h4 class="font-semibold text-tanean-dark mb-4">Kontak</h4>
                     <ul class="space-y-2 text-sm text-gray-600">
-                        <li><a href="#" class="hover:text-tanean-dark">Tentang Kami</a></li>
-                        <li><a href="#" class="hover:text-tanean-dark">Redaksi</a></li>
-                        <li><a href="#" class="hover:text-tanean-dark">Pedoman Media Siber</a></li>
-                        <li><a href="#" class="hover:text-tanean-dark">Kontak</a></li>
+                        <li><a href="{{ route('site-page.show', 'tentang-kami') }}" class="hover:text-tanean-dark">Tentang Kami</a></li>
+                        <li><a href="{{ route('site-page.show', 'redaksi') }}" class="hover:text-tanean-dark">Redaksi</a></li>
+                        <li><a href="{{ route('site-page.show', 'pedoman-media-siber') }}" class="hover:text-tanean-dark">Pedoman Media Siber</a></li>
+                        <li><a href="{{ route('site-page.show', 'kontak') }}" class="hover:text-tanean-dark">Kontak</a></li>
                     </ul>
                 </div>
 
@@ -242,7 +242,7 @@
                                 </a>
                             </div>
                             <div>
-                                <a href="{{ route('login') }}"
+                                <a href="{{ route('filament.admin.auth.login') }}"
                                     class="inline-flex px-5 py-2 text-xs font-bold uppercase tracking-wide text-tanean-dark hover:bg-white border border-tanean-dark transition"
                                     target="_blank">
                                     Masuk
@@ -292,7 +292,7 @@
 
             <div class="mt-8 space-y-3">
                 <a href="#" class="font-display block bg-tanean-green text-center py-2 rounded">Kirim Cerita</a>
-                <a href="{{ route('login') }}" class="font-display block border text-center py-2 rounded">Masuk</a>
+                <a href="{{ route('filament.admin.auth.login') }}" class="font-display block border text-center py-2 rounded">Masuk</a>
             </div>
         </div>
     </div>

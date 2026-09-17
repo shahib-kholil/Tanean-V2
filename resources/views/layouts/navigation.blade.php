@@ -38,10 +38,10 @@
                             <x-dropdown-link :href="route('profile.edit')">{{ __('Profile') }}</x-dropdown-link>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
+                            <form method="POST" action="{{ route('filament.admin.auth.logout') }}">
                                 @csrf
 
-                                <x-dropdown-link :href="route('logout')"
+                                <x-dropdown-link :href="route('filament.admin.auth.login')"
                                     onclick="event.preventDefault();
                                                         this.closest('form').submit();">
                                     {{ __('Log Out') }}
@@ -51,10 +51,10 @@
                     </x-dropdown>
                 @else
                     <div class="space-x-4">
-                        <a href="{{ route('login') }}"
+                        <a href="{{ route('filament.admin.auth.login') }}"
                             class="text-sm font-medium {{ $isHero ? 'text-white' : 'text-tanean-dark' }}">Log in</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}"
+                            <a href="{{ route('filament.admin.auth.login') }}"
                                 class="text-sm font-medium {{ $isHero ? 'text-white' : 'text-tanean-dark' }}">Register</a>
                         @endif
                     </div>
@@ -99,10 +99,10 @@
                     </x-responsive-nav-link>
 
                     <!-- Authentication -->
-                    <form method="POST" action="{{ route('logout') }}">
+                    <form method="POST" action="{{ route('filament.admin.auth.logout') }}">
                         @csrf
 
-                        <x-responsive-nav-link :href="route('logout')"
+                        <x-responsive-nav-link :href="route('filament.admin.auth.login')"
                             onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                             {{ __('Log Out') }}
@@ -111,10 +111,10 @@
                 </div>
             @else
                 <div class="mt-3 space-y-1 px-4">
-                    <a href="{{ route('login') }}"
+                    <a href="{{ route('filament.admin.auth.login') }}"
                         class="block text-sm text-gray-700 hover:text-gray-900">{{ __('Log in') }}</a>
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
+                        <a href="{{ route('filament.admin.auth.login') }}"
                             class="block text-sm text-gray-700 hover:text-gray-900">{{ __('Register') }}</a>
                     @endif
                 </div>

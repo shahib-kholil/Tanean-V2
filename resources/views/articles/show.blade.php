@@ -7,6 +7,58 @@
 
 @section('content')
 
+    <style>
+        .article-content {
+            overflow-wrap: anywhere;
+            font-family: 'Roboto Serif', serif;
+            font-size: clamp(1rem, 1.8vw, 1.125rem);
+            line-height: 1.8;
+        }
+
+        .article-content h1,
+        .article-content h2,
+        .article-content h3,
+        .article-content h4 {
+            margin: 1.5em 0 .6em;
+            font-family: 'Roboto Serif', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .article-content h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); }
+        .article-content h2 { font-size: clamp(1.45rem, 4vw, 2rem); }
+        .article-content h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+        .article-content p { margin: 0 0 1em; }
+        .article-content strong { font-weight: 700; }
+        .article-content em { font-style: italic; }
+        .article-content ul,
+        .article-content ol { margin: 1em 0; padding-left: 1.5em; }
+        .article-content ul { list-style: disc; }
+        .article-content ol { list-style: decimal; }
+        .article-content a { color: #756b5e; text-decoration: underline; }
+        .article-content blockquote {
+            margin: 1.5em 0;
+            border-left: 4px solid #aca593;
+            padding-left: 1em;
+            font-style: italic;
+        }
+        .article-content img,
+        .article-content video {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 1.5em auto;
+        }
+        .article-content table {
+            display: block;
+            max-width: 100%;
+            overflow-x: auto;
+            border-collapse: collapse;
+        }
+        .article-content th,
+        .article-content td { border: 1px solid #d2cec5; padding: .5em .7em; }
+    </style>
+
     {{-- Hero Section dengan Gambar dan Judul --}}
     <section id="hero-section" class="relative w-full h-[70vh] min-h-[100vh] overflow-hidden">
         {{-- Gambar Latar Belakang --}}
@@ -178,7 +230,7 @@
             </div>
 
             <div class="article-content text-left mt-8">
-                {!! nl2br(e($article->content)) !!}
+                {!! $article->content !!}
             </div>
         </article>
 

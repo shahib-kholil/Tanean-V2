@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use App\Support\SanitizesRichText;
 
 class Article extends Model
 {
@@ -118,6 +119,7 @@ class Article extends Model
         });
 
         static::saving(function ($article) {
+            $article->content = SanitizesRichText::clean($article->content);
             if (empty($article->excerpt)) {
                 $article->excerpt = Str::limit(strip_tags($article->content), 150);
             }
