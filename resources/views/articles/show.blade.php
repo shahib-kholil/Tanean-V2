@@ -98,7 +98,7 @@
             </div>
 
             <div class="flex justify-end gap-3">
-                <a href="{{ route('login') }}"
+                <a href="{{ route('filamenet.auth.admin.login') }}"
                     class="hidden md:inline-flex items-center px-4 py-2 rounded-full text-xl font-bold tracking-wide text-white">
                     Masuk
                 </a>
