@@ -51,7 +51,7 @@ unset($__defined_vars, $__key, $__value); ?>
         'kategori' => 'h-72 md:h-[300px]',
         'compact' => 'h-24',
         'slider' => 'h-32',
-        'lensa' => 'h-[100vh]',
+        'lensa' => 'h-72 md:h-[420px]',
         default => 'h-48',
     };
 

@@ -273,17 +273,20 @@
             </form>
 
             <nav class="mt-8 font-display text-base font-semibold text-tanean-dark">
-                <a href="<?php echo e(route('article.category', 'warta')); ?>" class="flex items-center justify-between border-b border-tanean-beige py-4">
-                    <span>Artikel</span>
+                <a href="<?php echo e(route('home')); ?>" class="flex items-center justify-between border-b border-tanean-beige py-4">
+                    <span>Home</span>
                 </a>
-                <a href="<?php echo e(route('article.category', 'lensa')); ?>" class="flex items-center justify-between border-b border-tanean-beige py-4">
-                    <span>Multimedia</span>
+                <a href="<?php echo e(route('article.category', 'warta')); ?>" class="flex items-center justify-between border-b border-tanean-beige py-4">
+                    <span>Warta</span>
+                </a>
+                <a href="<?php echo e(route('article.category', 'warita')); ?>" class="flex items-center justify-between border-b border-tanean-beige py-4">
+                    <span>Warita</span>
                 </a>
                 <a href="<?php echo e(route('article.category', 'swara')); ?>" class="flex items-center justify-between border-b border-tanean-beige py-4">
-                    <span>Serial</span>
+                    <span>Swara</span>
                 </a>
-                <a href="#" class="flex items-center justify-between border-b border-tanean-beige py-4">
-                    <span>Tentang Kami</span>
+                <a href="<?php echo e(route('article.category', 'lensa')); ?>" class="flex items-center justify-between border-b border-tanean-beige py-4">
+                    <span>Lensa</span>
                 </a>
             </nav>
 

@@ -1,5 +1,5 @@
 <!-- Grid Layout untuk Warta (Hanya 2 artikel) -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-16">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-5 lg:px-16">
     @forelse($topArticles as $article)
         <div>
             <x-article-card variant="kategori" :title="$article->title" :image="asset('storage/' . $article->image)" :excerpt="Str::limit($article->excerpt, 300)" :author="$article->author"

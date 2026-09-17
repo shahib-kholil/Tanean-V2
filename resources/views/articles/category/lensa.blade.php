@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-8 px-16">
+<div class="flex flex-col gap-8 px-5 lg:px-16">
     @forelse($topArticles as $article)
         <div>
             <x-article-card variant="lensa" :title="$article->title" :image="asset('storage/' . $article->image)" :excerpt="Str::limit($article->excerpt, 300)" :author="$article->author"

@@ -1,5 +1,5 @@
 <!-- Grid Layout untuk Warta (Hanya 2 artikel) -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-16">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-5 lg:px-16">
     <?php $__empty_1 = true; $__currentLoopData = $topArticles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
         <div>
             <?php if (isset($component)) { $__componentOriginal2ef36d4355cd7834c6b42ce99ba2ff15 = $component; } ?>
