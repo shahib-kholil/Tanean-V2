@@ -255,7 +255,7 @@
                 </div>
             </div>
             <div class="border-t border-tanean-dark py-4 mt-4 text-center text-sm text-tanean-dark">
-                <p>&copy; 2025 SHAHIB. All rights reserved.</p>
+                <p>&copy; 2025 <a href="https://fordev11.tech" class="text-tanean-dark hover:text-tanean-green">Tanean</a>. All rights reserved.</p>
             </div>
         </div>
     </footer>
