@@ -89,14 +89,13 @@
 
 <body class="font-sans overflow-x-hidden bg-[#f2f0eb]">
     <!-- Replace the existing <header> block with this -->
-    @if (!isset($hideHeader) || !$hideHeader)
-        <header class="bg-[#f2f0eb] sticky top-0 z-50">
+    <header class="{{ isset($hideHeader) && $hideHeader ? 'hidden' : '' }} bg-[#f2f0eb] sticky top-0 z-50">
             <!-- TOP BAR -->
             <div class="max-w-7xl mx-auto px-8 py-4">
                 <div class="grid grid-cols-3 items-center">
                     <div class="flex items-center gap-1 md:gap-6">
                         <button id="mobile-menu-button" class="flex flex-col items-center gap-1 text-tanean-beige">
-                            <svg class="w-4 h-4 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"
                                     d="M4 5h16M4 10h16M4 15h16M4 20h16" />
                             </svg>
@@ -172,7 +171,6 @@
                 <button id="close-search" class="mt-4 text-sm text-gray-500">Tutup</button>
             </div>
         </div>
-    @endif
 
 
 

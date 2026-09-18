@@ -77,15 +77,9 @@
             class="absolute top-0 left-0 w-full px-4 py-2 flex justify-between items-center z-20 transition-all duration-300 ease-in-out">
             <div class="flex items-center gap-4">
                 <button id="mobile-menu-button-hero" class="flex flex-col items-center gap-1 text-white">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"
                             d="M4 5h16M4 10h16M4 15h16M4 20h16" />
-                    </svg>
-                </button>
-                <button id="btn-search-hero" class="flex flex-col items-center gap-1 text-white">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </button>
             </div>
@@ -98,7 +92,7 @@
             </div>
 
             <div class="flex justify-end gap-3">
-                <a href="{{ route('filamenet.auth.admin.login') }}"
+                <a href="{{ route('filament.admin.auth.login') }}"
                     class="hidden md:inline-flex items-center px-4 py-2 rounded-full text-xl font-bold tracking-wide text-white">
                     Masuk
                 </a>
@@ -251,13 +245,19 @@
                 // Helper functions
                 const openModal = (el) => {
                     if (!el) return;
-                    el.classList.remove('hidden');
+                    el.classList.remove('hidden', 'pointer-events-none', 'opacity-0');
+                    el.classList.add('pointer-events-auto', 'opacity-100');
+                    const panel = el.firstElementChild;
+                    if (panel?.classList.contains('-translate-x-full')) panel.classList.remove('-translate-x-full');
                     body.classList.add('overflow-hidden');
                 };
 
                 const closeModal = (el) => {
                     if (!el) return;
-                    el.classList.add('hidden');
+                    el.classList.remove('pointer-events-auto', 'opacity-100');
+                    el.classList.add('pointer-events-none', 'opacity-0');
+                    const panel = el.firstElementChild;
+                    if (panel) panel.classList.add('-translate-x-full');
                     body.classList.remove('overflow-hidden');
                 };
 
